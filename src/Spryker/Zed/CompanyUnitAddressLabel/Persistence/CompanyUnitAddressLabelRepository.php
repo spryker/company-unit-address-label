@@ -20,9 +20,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class CompanyUnitAddressLabelRepository extends AbstractRepository implements CompanyUnitAddressLabelRepositoryInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     public function findCompanyUnitAddressLabels(): CompanyUnitAddressLabelCollectionTransfer
     {
         $companyUnitAddressLabelQuery = $this->getFactory()
@@ -31,11 +28,6 @@ class CompanyUnitAddressLabelRepository extends AbstractRepository implements Co
         return $this->createCollection($companyUnitAddressLabelQuery);
     }
 
-    /**
-     * @param int $idCompanyUnitAddress
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     public function findCompanyUnitAddressLabelsByAddress(int $idCompanyUnitAddress): CompanyUnitAddressLabelCollectionTransfer
     {
         $companyUnitAddressLabelQuery = $this->getFactory()
@@ -82,11 +74,6 @@ class CompanyUnitAddressLabelRepository extends AbstractRepository implements Co
             )->find()->getData();
     }
 
-    /**
-     * @param \Propel\Runtime\ActiveQuery\ModelCriteria $query
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     protected function createCollection(ModelCriteria $query): CompanyUnitAddressLabelCollectionTransfer
     {
         $companyUnitAddressLabelTransfers = $this->buildQueryFromCriteria($query)->find();

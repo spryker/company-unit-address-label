@@ -15,11 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class CompanyUnitAddressLabelEntityManager extends AbstractEntityManager implements CompanyUnitAddressLabelEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return void
-     */
     public function saveLabelToAddressRelations(
         CompanyUnitAddressTransfer $companyUnitAddressTransfer
     ): void {
@@ -38,11 +33,6 @@ class CompanyUnitAddressLabelEntityManager extends AbstractEntityManager impleme
         }
     }
 
-    /**
-     * @param array $labelToAddressRelationIds
-     *
-     * @return void
-     */
     public function deleteRedundantLabelToAddressRelations(
         array $labelToAddressRelationIds
     ): void {

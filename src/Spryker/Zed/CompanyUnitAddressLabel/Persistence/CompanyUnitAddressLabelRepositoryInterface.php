@@ -12,16 +12,8 @@ use Generated\Shared\Transfer\CompanyUnitAddressTransfer;
 
 interface CompanyUnitAddressLabelRepositoryInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     public function findCompanyUnitAddressLabels(): CompanyUnitAddressLabelCollectionTransfer;
 
-    /**
-     * @param int $idCompanyUnitAddress
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     public function findCompanyUnitAddressLabelsByAddress(int $idCompanyUnitAddress): CompanyUnitAddressLabelCollectionTransfer;
 
     /**

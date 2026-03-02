@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\CompanyUnitAddressTransfer;
 
 interface CompanyUnitAddressHydratorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressTransfer
-     */
     public function hydrate(CompanyUnitAddressTransfer $companyUnitAddressTransfer): CompanyUnitAddressTransfer;
 }

@@ -22,11 +22,6 @@ class CompanyUnitAddressLabelDataHelper extends Module
     use LocatorHelperTrait;
     use DataCleanupHelperTrait;
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelTransfer
-     */
     public function haveCompanyUnitAddressLabel(array $seed = []): CompanyUnitAddressLabelTransfer
     {
         $companyUnitAddressLabelTransfer = (new CompanyUnitAddressLabelBuilder($seed))->build();
@@ -41,11 +36,6 @@ class CompanyUnitAddressLabelDataHelper extends Module
         return $companyUnitAddressLabelTransfer;
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressResponseTransfer
-     */
     public function haveCompanyUnitAddressLabelRelations(array $seedData = []): CompanyUnitAddressResponseTransfer
     {
         $companyUnitAddressTransfer = (new CompanyUnitAddressBuilder($seedData))->build();

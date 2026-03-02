@@ -20,9 +20,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class CompanyUnitAddressLabelBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\CompanyUnitAddressLabel\Business\Model\CompanyUnitAddressHydratorInterface
-     */
     public function createCompanyUnitAddressHydrator(): CompanyUnitAddressHydratorInterface
     {
         return new CompanyUnitAddressHydrator(
@@ -30,9 +27,6 @@ class CompanyUnitAddressLabelBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CompanyUnitAddressLabel\Business\Model\CompanyUnitAddressLabelRelationSaverInterface
-     */
     public function createCompanyUnitAddressLabelRelationSaver(): CompanyUnitAddressLabelRelationSaverInterface
     {
         return new CompanyUnitAddressLabelRelationSaver(

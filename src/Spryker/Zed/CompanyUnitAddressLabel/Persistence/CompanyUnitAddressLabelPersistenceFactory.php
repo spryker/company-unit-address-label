@@ -18,17 +18,11 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class CompanyUnitAddressLabelPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\CompanyUnitAddressLabel\Persistence\SpyCompanyUnitAddressLabelQuery
-     */
     public function createCompanyUnitAddressLabelQuery(): SpyCompanyUnitAddressLabelQuery
     {
         return SpyCompanyUnitAddressLabelQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\CompanyUnitAddressLabel\Persistence\SpyCompanyUnitAddressLabelToCompanyUnitAddressQuery
-     */
     public function createCompanyUnitAddressLabelToCompanyUnitAddressQuery(): SpyCompanyUnitAddressLabelToCompanyUnitAddressQuery
     {
         return SpyCompanyUnitAddressLabelToCompanyUnitAddressQuery::create();

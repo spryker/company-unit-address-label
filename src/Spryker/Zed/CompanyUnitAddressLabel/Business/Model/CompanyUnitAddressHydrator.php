@@ -17,19 +17,11 @@ class CompanyUnitAddressHydrator implements CompanyUnitAddressHydratorInterface
      */
     protected $companyUnitAddressLabelRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyUnitAddressLabel\Persistence\CompanyUnitAddressLabelRepositoryInterface $companyUnitAddressRepository
-     */
     public function __construct(CompanyUnitAddressLabelRepositoryInterface $companyUnitAddressRepository)
     {
         $this->companyUnitAddressLabelRepository = $companyUnitAddressRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressTransfer
-     */
     public function hydrate(CompanyUnitAddressTransfer $companyUnitAddressTransfer): CompanyUnitAddressTransfer
     {
         $labelCollection = $this->companyUnitAddressLabelRepository

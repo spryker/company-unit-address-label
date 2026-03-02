@@ -33,21 +33,12 @@ class CompanyUnitAddressLabelBusinessTester extends Actor
 {
     use _generated\CompanyUnitAddressLabelBusinessTesterActions;
 
-    /**
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     public function getCompanyUnitAddressLabelCollection(): CompanyUnitAddressLabelCollectionTransfer
     {
         return (new CompanyUnitAddressLabelRepository())
             ->findCompanyUnitAddressLabels();
     }
 
-    /**
-     * @param array $seedData
-     * @param array $companyBusinessUnitSeedData
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressTransfer
-     */
     public function createCompanyUnitAddressTransfer(array $seedData = [], array $companyBusinessUnitSeedData = []): CompanyUnitAddressTransfer
     {
         if (!isset($companyBusinessUnitSeedData[CompanyBusinessUnitTransfer::FK_COMPANY])) {
@@ -59,11 +50,6 @@ class CompanyUnitAddressLabelBusinessTester extends Actor
         return $this->haveCompanyUnitAddress($seedData);
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressResponseTransfer
-     */
     public function createCompanyUnitAddressLabelRelations(array $seedData = []): CompanyUnitAddressResponseTransfer
     {
         if (!isset($seedData[CompanyUnitAddressTransfer::LABEL_COLLECTION])) {

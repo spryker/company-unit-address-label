@@ -24,10 +24,6 @@ class CompanyUnitAddressLabelRelationSaver implements CompanyUnitAddressLabelRel
      */
     protected $companyUnitAddressLabelRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyUnitAddressLabel\Persistence\CompanyUnitAddressLabelEntityManagerInterface $entityManager
-     * @param \Spryker\Zed\CompanyUnitAddressLabel\Persistence\CompanyUnitAddressLabelRepositoryInterface $labelRepository
-     */
     public function __construct(
         CompanyUnitAddressLabelEntityManagerInterface $entityManager,
         CompanyUnitAddressLabelRepositoryInterface $labelRepository
@@ -36,11 +32,6 @@ class CompanyUnitAddressLabelRelationSaver implements CompanyUnitAddressLabelRel
         $this->companyUnitAddressEntityManager = $entityManager;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressResponseTransfer
-     */
     public function saveLabelToAddressRelations(CompanyUnitAddressTransfer $companyUnitAddressTransfer): CompanyUnitAddressResponseTransfer
     {
         $redundantRelationIds = $this->getRedundantLabelToAddressRelationIds($companyUnitAddressTransfer);
@@ -73,11 +64,6 @@ class CompanyUnitAddressLabelRelationSaver implements CompanyUnitAddressLabelRel
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return array
-     */
     protected function getLabelIds(CompanyUnitAddressTransfer $companyUnitAddressTransfer): array
     {
         $result = [];

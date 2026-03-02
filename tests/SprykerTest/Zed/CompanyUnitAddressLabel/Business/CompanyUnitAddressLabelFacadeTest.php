@@ -28,9 +28,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testSaveLabelToAddressRelationsStoresDataToTheDatabase(): void
     {
         // Arrange
@@ -47,9 +44,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertLabelsAreStored($companyUnitAddressTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testSaveLabelToAddressRelationsRemovesRedundantRelations(): void
     {
         // Arrange
@@ -68,9 +62,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertRedundantLabelsAreDeleted($companyUnitAddressTransferRedundant);
     }
 
-    /**
-     * @return void
-     */
     public function testHydrateCompanyUnitAddressWithLabelCollectionHydratesTransfer(): void
     {
         // Arrange
@@ -86,9 +77,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertNotEmpty($companyUnitAddressTransferHidrated->getLabelCollection()->getLabels());
     }
 
-    /**
-     * @return void
-     */
     public function testGetCompanyUnitAddressLabelsByAddressReturnsCollectionWhenRelationExists(): void
     {
         // Arrange
@@ -103,9 +91,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertNotEmpty($companyUnitAddressLabelCollectionTransfer->getLabels());
     }
 
-    /**
-     * @return void
-     */
     public function testGetCompanyUnitAddressLabelsByAddressReturnsEmptyCollectionWhenRelationDoesNotExists(): void
     {
         // Arrange
@@ -119,11 +104,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertEmpty($companyUnitAddressLabelCollectionTransfer->getLabels());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return void
-     */
     protected function assertLabelsAreStored(CompanyUnitAddressTransfer $companyUnitAddressTransfer): void
     {
         $originalCompanyUnitAddressIds = [];
@@ -143,11 +123,6 @@ class CompanyUnitAddressLabelFacadeTest extends Unit
         $this->assertEquals($originalCompanyUnitAddressIds, $storedCompanyUnitAddressIds);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return void
-     */
     protected function assertRedundantLabelsAreDeleted(CompanyUnitAddressTransfer $companyUnitAddressTransfer): void
     {
         $originalCompanyUnitAddressLabelIds = [];

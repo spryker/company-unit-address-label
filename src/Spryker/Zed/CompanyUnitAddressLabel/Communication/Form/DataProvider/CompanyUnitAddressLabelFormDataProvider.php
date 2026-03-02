@@ -20,9 +20,6 @@ class CompanyUnitAddressLabelFormDataProvider
      */
     protected $companyUnitAddressLabelRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyUnitAddressLabel\Persistence\CompanyUnitAddressLabelRepositoryInterface $companyUnitAddressLabelRepository
-     */
     public function __construct(
         CompanyUnitAddressLabelRepositoryInterface $companyUnitAddressLabelRepository
     ) {
@@ -73,9 +70,6 @@ class CompanyUnitAddressLabelFormDataProvider
         return $result;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CompanyUnitAddressLabelCollectionTransfer
-     */
     protected function getEmptyAddressLabelCollection(): CompanyUnitAddressLabelCollectionTransfer
     {
         $labelCollection = new CompanyUnitAddressLabelCollectionTransfer();

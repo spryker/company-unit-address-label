@@ -11,20 +11,10 @@ use Generated\Shared\Transfer\CompanyUnitAddressTransfer;
 
 interface CompanyUnitAddressLabelEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return void
-     */
     public function saveLabelToAddressRelations(
         CompanyUnitAddressTransfer $companyUnitAddressTransfer
     ): void;
 
-    /**
-     * @param array $labelToAddressRelationIds
-     *
-     * @return void
-     */
     public function deleteRedundantLabelToAddressRelations(
         array $labelToAddressRelationIds
     ): void;
